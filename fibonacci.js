@@ -1,6 +1,6 @@
-import { memoize } from './memoize';
+const { memoize } = require('./memoize')
 
-export const fib = n => {
+const fib = n => {
   if (n < 2) {
     return n;
   } else {
@@ -8,4 +8,6 @@ export const fib = n => {
   }
 }
 
-export const memoizedFib = memoize(n => fib(n));
+const memoizedFib = memoize(n => fib(n));
+
+module.exports = { fib, memoizedFib };

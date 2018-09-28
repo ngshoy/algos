@@ -1,6 +1,6 @@
-import { memoize } from './memoize';
+const { memoize } = require('./memoize')
 
-export const makeChange = (n, bills) => {
+const makeChange = (n, bills) => {
     if (n < 0) {
         return 0;
     } else if (n == 0) {
@@ -14,4 +14,6 @@ export const makeChange = (n, bills) => {
     }
 };
 
-export const memoizedMakeChange = memoize((n, bills) => makeChange(n, bills));
+const memoizedMakeChange = memoize((n, bills) => makeChange(n, bills));
+
+module.exports = { makeChange, memoizedMakeChange };

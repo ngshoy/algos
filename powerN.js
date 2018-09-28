@@ -7,3 +7,5 @@ const powerN = (base, power) => {
         return powerN(base * base, power / 2);
     }
 };
+
+module.exports = { powerN };

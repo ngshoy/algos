@@ -3,7 +3,7 @@ const myPut = (text, name, tStart, tEnd) =>
 
 const myGet = () => performance.now();
 
-export const addTiming = (fn, getTime = myGet, output = myPut) => (...args) => {
+const addTiming = (fn, getTime = myGet, output = myPut) => (...args) => {
     let tStart = getTime();
     try {
         const valueToReturn = fn(...args);
@@ -14,3 +14,5 @@ export const addTiming = (fn, getTime = myGet, output = myPut) => (...args) => {
         throw thrownError;
     }
 };
+
+module.exports = { addTiming };

@@ -26,3 +26,5 @@ const recursiveDir = path => {
         }
     });
 };
+
+module.exports = { traverseDom, recursiveDir };

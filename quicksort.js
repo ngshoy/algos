@@ -1,4 +1,4 @@
-export const quicksort = arr => {
+const quicksort = arr => {
   if (arr.length < 2) {
     return arr;
   } else {
@@ -8,3 +8,5 @@ export const quicksort = arr => {
     return [...quicksort(smaller), pivot, ...quicksort(greaterEqual)];
   }
 };
+
+module.exports = { quicksort };

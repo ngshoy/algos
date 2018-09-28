@@ -7,3 +7,5 @@ const search = (arr, key) => {
         return search(arr.slice(1), key);
     }
 };
+
+module.exports = { search };
