@@ -6,4 +6,9 @@ const memoize = fn => {
     };
 };
 
-module.exports = { memoize };
+const memoizeUnary = fn => {
+    let cache = {};
+    return x => (x in cache ? cache[x] : (cache[x] = fn(x)));
+};
+
+module.exports = { memoize, memoizeUnary };

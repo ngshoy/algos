@@ -1,7 +1,7 @@
 const myPut = (text, name, tStart, tEnd) =>
     console.log(`${name} - ${text} ${tEnd - tStart} ms`);
 
-const myGet = () => performance.now();
+const myGet = () => Date.now();
 
 const addTiming = (fn, getTime = myGet, output = myPut) => (...args) => {
     let tStart = getTime();
